@@ -1,5 +1,6 @@
 var addTwoNumbers = function(l1, l2) {
-    const a =[]
+    let result = new ListNode(0)
+    let currentNode = result
     let carryOver = 0
     while(l1 != null || l2 != null) {
         let v1 = 0
@@ -7,11 +8,11 @@ var addTwoNumbers = function(l1, l2) {
         if (l1 != null) v1 = l1.val
         if (l2 != null) v2 = l2.val
 
-        const sum = v1 + v2 + carryOver
-        a.push(sum)
+        let sum = v1 + v2 + carryOver
+        carryOver = Math.floor(sum / 10)
+        sum = sum % 10
 
         if(l2 != null) l1 = l1.next
         if(l2 != null) l2 = l2.next
     }
-    console.log(a)
 }
