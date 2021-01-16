@@ -9,6 +9,9 @@
 // @return {ListNode}
 
 const addTwoNumbers = (l1, l2) => {
+    while(l1 != null || l2 != null) {
+        if(l2 != null) l1 = l1.next
+        if(l2 !=)
 
-  
+    }
 }
